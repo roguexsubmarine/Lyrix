@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import requests
 from bs4 import BeautifulSoup
@@ -69,7 +69,9 @@ def get_lyrics(hlink):
         r = r + hlink[idx]
 
     url = r
-    print(url)
+
+    # optional printing links
+    #print(url)
     
     res = requests.get(url)
     htmlData = res.content
@@ -93,8 +95,8 @@ def get_lyrics(hlink):
 # main program
 
 #taking arguments
-promt = "".join(sys.argv[1:])
-while not promt:
+prompt = "".join(sys.argv[1:])
+if not prompt:
     prompt = input("Enter prompt : ")
 
 url = get_links(prompt)
@@ -102,4 +104,4 @@ lyrics = get_lyrics(url)
 
 # printing in terminal
 for lyric in lyrics:
-    print(lyric)
+    print('\t', lyric)
