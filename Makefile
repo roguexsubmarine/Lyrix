@@ -1,11 +1,10 @@
 lyrix:
-	chmod +x lyrix
-	chmod +x lyrix_dist/lyrix
 
 clean:
-	rm -r lyrix_dist
-	rm lyrix
+	rm -rf /usr/bin/lyrix_dist
+	rm /usr/bin/lyrix
 
 install:
 	cp -r lyrix_dist /usr/bin/
-	cp lyrix /usr/bin
+	cp lyrix /usr/bin/	
+	chmod +x /usr/bin/lyrix
