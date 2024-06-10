@@ -9,9 +9,9 @@ Source0:    https://github.com/roguexsubmarine/Lyrix/releases/download/%{version
 BuildRequires:  make
 
 Requires:       bash python python3
-Requires:       python-requests
-Requires:       python-bs4
-Requires:       python-lxml
+Requires:       python3-requests
+Requires:       python3-beautifulsoup4
+Requires:       python3-lxml
 
 BuildArch:      noarch
 
