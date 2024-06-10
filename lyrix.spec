@@ -8,8 +8,9 @@ Source0:    https://github.com/roguexsubmarine/Lyrix/release/%{name}-%{version}.
 
 Buildrequires:  make
 Requires:       bash python python3
-Requires:       python
-Requires:       python3
+Requires:       python-requests
+Requires:       python-bs4
+Requires:       python-lxml
 
 BuildArch:      noarch
 
@@ -22,13 +23,12 @@ This is a command line application to scrape song lyrix from web
 %build
 
 %install
-cp -rf lyrix_dist %{buildroot}/%{_bindir}/
-cp %{name} %{buildroot}/%{_bindir}/	
-chmod +x %{buildroot}/%{_bindi}/%{name}
+cp lyrix %{buildroot}/usr/bin/
+chmod +x %{buildroot}/usr/bin/lyrix
 
 %files
 
 %changelog
-* Fri Jun 07 2024 submarine <roguexsubmarine@gmail.com> - 0.1-1
+* Mon Jun 10 2024 submarine <roguexsubmarine@gmail.com> - 0.1-1
 - initial build
 
