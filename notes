@@ -1,4 +1,0 @@
-pip install 
-- requests (getting the html)
-- bs4 (for scraping , various ops)
-- lxml (fast-parser written in C)
