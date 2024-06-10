@@ -1,5 +1,5 @@
 Name:       lyrix
-Version:    0.1.1
+Version:    1.0
 Release:    1
 Summary:    display song lyrix in terminal
 License:    GPLv3+
@@ -23,10 +23,11 @@ This is a command line application to scrape song lyrix from web
 %build
 
 %install
-cp lyrix %{buildroot}/usr/bin/
-chmod +x %{buildroot}/usr/bin/lyrix
+%make_install
 
 %files
+%license LICENSE
+%{_bindir}/%{name}
 
 %changelog
 * Mon Jun 10 2024 submarine <roguexsubmarine@gmail.com> - 0.1-1
